@@ -1,0 +1,239 @@
+/* Paleta de Colores Rosita */
+:root {
+  --pink-primary: #ffc0cb; /* Rosa Pastel */
+  --pink-light: #fff0f5;   /* Rosa Lavanda muy claro */
+  --pink-dark: #ffb6c1;    /* Rosa Claro un poco más oscuro */
+  --pink-accent: #db7093;  /* Rosa Pálido Intenso para acentos */
+  --text-main: #4a4a4a;
+  --text-light: #7a7a7a;
+  --bg-main: #fafafa;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--pink-light);
+  color: var(--text-main);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 900px;
+  width: 100%;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3); /* Sombra rosada */
+  border: 2px solid var(--pink-primary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid var(--pink-light);
+  padding-bottom: 20px;
+}
+
+.icon-heart {
+  font-size: 3rem;
+  color: var(--pink-accent);
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--pink-accent);
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  color: var(--text-light);
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.input-section {
+  margin-bottom: 30px;
+}
+
+.input-section label {
+  color: var(--pink-accent);
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid var(--pink-primary);
+  border-radius: 10px;
+  background-color: var(--white);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--pink-accent);
+  box-shadow: 0 0 10px rgba(219, 112, 147, 0.2);
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--pink-accent);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button:hover {
+  background-color: #c71585; /* Un rosa más oscuro al pasar el mouse */
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--pink-accent);
+}
+
+.btn-secondary {
+  background-color: #f08ca8;
+}
+
+.btn-secondary:hover {
+  background-color: #df6b8d;
+}
+
+h3 {
+  color: var(--pink-accent);
+  border-left: 5px solid var(--pink-primary);
+  padding-left: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.results-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .results-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.table-container {
+  background-color: var(--bg-main);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--pink-light);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+  border: 1px solid var(--pink-primary);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--pink-light);
+}
+
+th {
+  background-color: var(--pink-primary);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) td {
+  background-color: #fffaf0; /* Un color crema muy suave para filas pares */
+}
+
+tr:hover td {
+  background-color: #ffe4e1; /* Rosa brumoso al pasar el mouse por la fila */
+}
+
+.code-section {
+  margin-top: 30px;
+}
+
+.code-window {
+  background-color: #2d2d2d; /* Ventana de código oscura para contraste */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.code-header {
+  background-color: #e0e0e0;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.file-name {
+  margin-left: 10px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+pre {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  color: #f8f8f2; /* Color de texto claro para código */
+  overflow-x: auto;
+}
+
+/* Colores de resaltado de sintaxis dentro del código JS */
+pre .keyword { color: #ff79c6; } /* Rosa intenso para palabras clave */
+pre .variable { color: #8be9fd; } /* Cian para variables */
+pre .operator { color: #bd93f9; } /* Morado para operadores */

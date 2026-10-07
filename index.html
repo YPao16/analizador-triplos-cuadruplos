@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analizador de Código Intermedio - Pink Edition</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Iconos opcionales (FontAwesome) para un toque extra -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="header">
+      <i class="fas fa-heart-code icon-heart"></i>
+      <h2>Generador de Cuádruplos y Triplos</h2>
+      <p class="subtitle">Analizador Léxico y Sintáctico Simple</p>
+    </div>
+    
+    <div class="input-section">
+      <label for="expresion"><b>Introduce la Expresión:</b></label>
+      <div class="input-group">
+        <input type="text" id="expresion" value="x = a + b * c;" placeholder="Ej: x = a + b * c;">
+        <button type="button" onclick="procesar()" class="btn-primary"><i class="fas fa-magic"></i> Generar</button>
+        <button type="button" onclick="reiniciarEntrada()" class="btn-secondary"><i class="fas fa-rotate-left"></i> Reiniciar</button>
+      </div>
+    </div>
+
+    <div class="results-section">
+      <div class="table-container">
+        <h3><i class="fas fa-table"></i> Cuádruplos:</h3>
+        <table id="tabla-cuadruplos">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Operador</th>
+              <th>Operando1</th>
+              <th>Operando2</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Se llena dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <h3><i class="fas fa-list-ol"></i> Triplos:</h3>
+        <table id="tabla-triplos">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Operador</th>
+              <th>Operando1</th>
+              <th>Operando2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Se llena dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="code-section">
+      <h3><i class="fab fa-js-square"></i> Código equivalente en JavaScript:</h3>
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="file-name">output.js</span>
+        </div>
+        <pre id="codigo-js"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
